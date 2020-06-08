@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>실명확인 회원가입</title>
+    
+    
+    <style>
+        
+        form{
+            border: 1px solid gray;
+            margin: 0 auto;
+        }
+        div{
+         font-size: 20px;   
+        font-weight: 700;  
+        }
+    
+        #bnt{
+            padding: 5px;
+            background-color: yellowgreen;
+            font-weight: 900;
+            color: black;
+            border: 1px solid gray;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <h2>실명확인 회원가입</h2>
+
+   
+    <form aciton="" method="get">
+        <table>
+            <input type="radio" value="iPin">아이핀(I-Pin)
+            <input type="radio" value="number">주민등록 번호
+            <tr>
+                <td>아이디</td>
+                <td><input type="text" name="id"></td>
+            </tr>
+            <tr>
+                <td>주민등록 번호</td>
+                <td><input type="text" name="num1">-<input type="password" name="num2"></td>
+            </tr>
+            <tr>
+                <td>
+
+                    <div><input type="checkbox" name="select">주빈등록번호 처리에 동의합니다.</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="확인" id="bnt">
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+
+</html>
