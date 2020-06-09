@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 선택자 selector</title>
+
+    <style>
+        /*
+        속성 선택자 선택자[선택이름] : 특성속성을 가지는 태그들을 선택 ex)input[type] 선택자[속성이름=속성값] : 특성 속성을 가지며,
+        속성에 특정 값을 가지는 태그들을 선택 ex)input[type=password]
+*/
+        /* ex) input[type] { }*/
+
+
+
+        input {
+            height: 30px;
+            margin: 10px 0;
+        }
+
+        /*
+        input[type] {
+            border: 1px solid blue;
+        }
+*/
+
+
+        input[type=text] {
+            background-color: blueviolet;
+        }
+
+        input[type=password] {
+            background-color: brown;
+        }
+
+        img[alt] {
+            width: 100px;
+            width: 200px;
+        }
+
+        img[src$=jpg] {
+            border: 1px solid red;
+        }
+
+        img[src$=png] {
+            border: 3px solid green;
+        }
+
+
+
+        /* 후손 선택 : 선택의 범위를 제한 선택자 범위안의 선택자
+        
+        ex)
+        div h1{
+            
+        }
+    
+        */
+
+        #header h1 {
+            color: red;
+        }
+
+        /* id= header, class=title*/
+        #header .title {
+            color: mediumaquamarine;
+        }
+
+        #header h1,
+        #header h2 {
+            color: red;
+        }
+
+        /*
+        form input {
+
+            width: 100%;
+        }
+*/
+
+
+        /* 자손선택자 선택자>선택자
+            예) div > h1 {}        
+        */
+
+        #header>h1 {
+            background-color: aquamarine;
+        }
+
+        /* 테이블 속성 주의*/
+        table>tbody>tr>td {
+            color: red;
+        }
+
+        /*        동위 선택자: 같은 레벨의(형제) 태그들을 기준으로 선택
+        + : 바로뒤의 요소 선택
+        ~ : 같은 레벨의 형제 태그들 중 선택 */
+
+        h3+h4 {
+            color: coral;
+        }
+
+        h3~h4.aa {
+            background-color: deepskyblue;
+        }
+
+        /*
+        반응선택자 
+        선택자:hover
+        -> 마우스가 선택된 요소의 영역으로 들어갔을때
+        
+        선택자:active
+        -> 마우스 커서는 선택된 요소 위에 존재하고, 마우스 왼쪽 버튼을 클릭한 상태 
+*/
+
+        h3 {
+            background-color: darkorange;
+        }
+
+        h3:hover {
+            color: red;
+            font-size: 32px;
+            font-style: italic;
+        }
+
+        h3:active {
+            color: aqua;
+        }
+
+        #myform input {
+            background-color: white;
+        }
+
+        #myform input:disabled {
+            background-color: darkkhaki;
+        }
+
+        #myform input:enabled {
+            background-color: floralwhite;
+        }
+
+
+
+        #myform input[type=checkbox] {
+            width: 30px;
+            height: 30px;
+        }
+
+
+        #myform input[type=checkbox] :checked {
+            width: 30px;
+            height: 30px;
+        }
+
+        #viewmenu+div {
+            display: none;
+        }
+
+        #viewmenu:checked+div {
+            display: block;
+        }
+
+
+
+
+        #nav {
+            overflow: hidden;
+        }
+
+        #nav>li {
+            list-style: none;
+            /*리스트 수평 방향*/
+            float: left;
+            padding: 5px 15px;
+        }
+
+
+        /*
+        #nav>li:nth-child(1){
+            background: red;
+        }    
+*/
+
+        #nav>li:nth-child(2n+1) {
+            background: aqua;
+        }
+
+        #nav>li:nth-child(2n) {
+            background-color: aquamarine;
+        }
+
+        #nav>li:first-child {
+            /*            border: 1px solid gray;*/
+            border-radius: 10px 0px 0px 10px;
+        }
+
+        #nav>li:last-child {
+            /*            border: 1px solid gray;*/
+            border-radius: 0px 10px 10px 0px;
+        }
+
+        p::first-letter {
+            font-size: 3em;
+        }
+
+        p::first-line {
+            color: blueviolet;
+            font-weight: bold;
+        }
+
+        p::selection {
+            background-color: greenyellow;
+            color: darkgreen;
+        }
+
+        a:link {
+            color: blue;    
+/*            text-decoration: none;*/
+            font-weight: bold;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        
+        a:active{
+            color: antiquewhite;
+        }
+                
+    </style>
+
+</head>
+
+
+
+
+<body>
+
+    <form>
+        <input>
+        <br>
+        <input type="text">
+        <br>
+        <input type="password">
+    </form>
+
+
+    <img src="../image1.jpg" width="200px">
+    <img src="../image1.jpg" alt="이미지1">
+    <img src="../image2.png" width="200px">
+
+    <form>
+        <div id="header">
+            <h1 class="title">Title</h1>
+            <div id="nav">
+                <h1> Navigation</h1>
+            </div>
+            <h1>etc</h1>
+            <h2>h2 tag</h2>
+        </div>
+
+
+        <div id="section">
+            <h1 class="title">Title</h1>
+            <p>안녕하세요</p>
+            <h2>h2 tag</h2>
+        </div>
+    </form>
+
+    <table border="10">
+        <tr>
+            <td>아이디</td>
+            <td><input></td>
+        </tr>
+        <tr>
+            <td>비밀번호</td>
+            <td><input></td>
+        </tr>
+
+    </table>
+
+    <h3>header-3</h3>
+    <h5>header-5</h5>
+    <h4 class="aa">header-4</h4>
+    <h4 class="aa">header-4</h4>
+
+
+    <form id="myform">
+        <div>
+            <!-- 텍스트를 사용할 수 없음-->
+            <input type="text" disabled>
+        </div>
+        <br>
+        <div>
+            <!--읽기전용-->
+            <input type="text" readonly>
+        </div>
+        <br>
+        <div>
+            <!--유효성 검사-->
+            <input type="text" required>
+        </div>
+
+        <div>
+            <!--숫자 입력-->
+            <input type="number" required>
+        </div>
+
+        <br>
+        <input type="submit">
+        <br>
+
+
+        <div>
+            약관 동의 <input type="checkbox" checked>
+        </div>
+        <div>
+            마케팅 동의 <input type="checkbox">
+        </div>
+        <br>
+        <div>
+            약관 보기 <input type="checkbox" id="viewmenu">
+            <div>
+                <h4>이용 약관</h4>
+                <p>
+                    문제가 생기면 바로 강퇴됩니다.
+                </p>
+            </div>
+        </div>
+
+    </form>
+
+    <ul id="nav">
+        <li><a href="#">home</a></li>
+        <li><a href="#">company</a></li>
+        <li><a href="#">servie</a></li>
+        <li><a href="#">product</a></li>
+        <li><a href="#">notice</a></li>
+        <li><a href="#">contacus</a></li>
+        <li><a href="#">eng</a></li>
+    </ul>
+
+
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Aenean ac erat et massa vehicula laoreet consequat et sem.
+        Aenean ac erat et massa vehicula laoreet consequat et sem.</p>
+
+
+
+
+
+</body></html>
