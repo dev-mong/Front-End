@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 기본 문법</title>
+
+    
+    <script>
+        // 데이터의 출력
+        // alert() 함수 : 문자열, 숫자, 함수, 객체, 배열
+        // console.log : 문자열, 숫자, 함수, 객체, 배열
+
+        //데이터 : 문자
+        //문자 표현-> '' 또는 ""
+        // alert('"String"');
+
+        //데이터 : 숫자
+        //정수와 실수를 구분하지 않는다.
+        // alert(10);
+        // alert(3.14);
+
+        //연산자 : 산술연산자 -> + - / * %
+        //우선 순위는 () 최우선, 기본 순서와 동일
+        // alert(1+1);
+        // alert((10+1)*2);
+
+        //데이터 : bool true/false
+        //if(bool)
+        //0 -> false, 1->true
+        // alert(false);
+
+        //연산자 : 비교연산자 =>  > < >= <= == !=
+        //비교연산의 결과 : bool
+        // alert(10>1); 
+
+        //연산자 : 논리연산자 -> && || ! 
+        var num = 10;
+        // alert(num>5 && num<=10);
+
+        //변수 : 데이터를 저장하는 목적
+        //변수 선언 방법
+        //var 변수명;
+        //var 변수면=데이터;
+        var name='king';
+        // alert(num);
+        // alert(name);
+
+
+        {
+            var check=true;
+        }
+        var check=false;
+
+        //let : 지역변수로 사용
+        {
+            let check=10;
+            // alert(check);
+        }
+        // alert(check);
+        // let age=20;
+        // let age=30;
+        
+        //const : 상수 
+        const pi=3.14;
+        // pi=10; -> 오류
+        // alert(pi);
+        
+        //변수에 초기화 : 변수에 데이터 대입
+        //문자열, 숫자, bool, function 함수, Object 객체, Array 배열
+        //함수 : fuction 함수 이름(매개변수) {실행코드}
+        //익명함수 : fuction (매개변수) {실행코드}
+        //객체 : {}
+        //베열 : []
+
+        // 오류 ))
+        // alert(num1);
+        // num1 +1; //변수 선언이 안된 경우 
+
+        var number;
+        // alert(number);
+        // alert(number+1);
+
+        var stringVar='문자열';         //string
+        var numberVar=273;             // number
+        var booleanVar=false;          // boolean
+        var functionVar = 
+        function(){alert('function')}; //function
+        var objectVar={};              //object
+        var arrayVar=[1,2,3];          //object
+
+        // alert(stringVar);
+        // alert(numberVar);
+        // alert(booleanVar);
+        // alert(functionVar);
+        // alert(objectVar);
+        // alert(arrayVar);
+
+        // functionVar();
+        // alert(typeof(arrayVar));
+ 
+        // if(typeof(booleanVar) !='undifined'){
+        //     alert(arrayVar);
+        // }
+
+
+        //복합 대입 연산자 : +=, *=, -=, /=
+        //+= <- 가장 많이 사용
+        var html_str='';
+        html_str +='<div>\n';
+        html_str +='<h1>인사</h1>\n';
+        html_str +='<p>안녕하세요</p>\n';
+        html_str +='</div>';
+        // alert(html_str);
+
+        // document.write(html_str);
+        
+        
+        //body 태그가 렌더링되어야 가능
+        // var html_val=document.body.innerHTML;
+        // alert(html_val);
+
+        /*
+        window.onload=function(){ //body 태그 렌더링 후 실행
+        //prompt : 사용자의 문자열 입력받는 함수
+        var message=prompt('이름을입력하세요'); //메세지 입력 
+        //comfrim : 사용자의 선택 여부를 확인하는 함수
+        var check=confirm('입력된 이름을 사용하시겠습니까?'); //사용자의 선택 여부( ex- 게시물 삭제 여부 )
+
+        var list='';
+        list += '<ul>';
+        if(check){
+            list += '   <li>'+message+'</li>';
+        }
+        list += '   <li>JavaScript</li>';
+        list += '   <li>JQuery</li>';
+        list += '</ul>';
+
+        document.body.innerHTML += list;   
+        }
+        */
+
+        //+ 연산의 경우 문자열 우선
+        // alert('1'+2); //'1'+'2'
+
+        //+ 연산자가 아닌 다른 연산의 경우 숫자 연산 우선
+        // alert(7*'5'); // 7*5 => 35
+
+        // alert(7*'n'); //=> NaN : Not a Number
+
+        var n=prompt('숫자를 입력해주세요.');
+        // alert(typeof(n));
+
+        //형변환 함수 : 숫자로 변환 -> Number()
+        var userNumber= Number(n); //숫자로 타입 변환 
+        if(userNumber+1){
+            alert(userNumber);
+        }
+
+        // alert(userNumber+1); //입력 숫자 + 1 연산 결과 출력 , 숫자를 입력안하면 NaN(숫자가 아닐 때 출력)
+        // alert(typeof(userNumber));
+
+        // alert(Boolean(0));
+        // alert(Boolean(NaN));
+        // alert(Boolean(''));
+        // alert(Boolean(null));
+        // alert(Boolean(undefined));
+
+        //자동 형변환 
+        alert(!!0);          //0 -> false
+        alert(!!NaN);        // NaN -> false
+        alert(!!'');         //'' -> false
+        alert(!!null);       //null -> false
+        alert(!!undefined); //undifined -> false
+
+        //자동 형변환 케이스
+
+
+
+
+
+        
+
+
+
+
+
+
+         
+
+    </script>
+
+</head>
+<body>
+    <h1>자바스크립트 예제를 하고 있습니다.</h1>
+    <p>재미있는 자바 스크립트</p>
+</body>
+</html>
+
+<!-- <script>
+    var html_val=document.body.innerHTML;
+    // alert(html_val);
+
+    var list='';
+    list += '<ul>';
+    list += '   <li>JavaScript</li>';
+    list += '   <li>JQuery</li>';
+    list += '</ul>';
+
+    document.body.innerHTML = list;
+
+
+
+</script> -->
