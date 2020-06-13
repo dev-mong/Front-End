@@ -15,31 +15,32 @@
 
         input {
             height: 30px;
-            margin: 10px 0;
+            margin: 10px 0; /*magin : 위 오른쪽 아래 왼쪽*/
         }
 
-        /*
+        
         input[type] {
             border: 1px solid blue;
         }
-*/
+
 
 
         input[type=text] {
-            background-color: blueviolet;
+            background-color: cornflowerblue;
         }
 
         input[type=password] {
-            background-color: brown;
+            background-color: deepskyblue;
         }
 
         img[alt] {
-            width: 100px;
+            width: 150px;
             width: 200px;
         }
 
+        /*선택자[속성$속성값]*/
         img[src$=jpg] {
-            border: 1px solid red;
+            border: 5px solid black;
         }
 
         img[src$=png] {
@@ -66,16 +67,17 @@
             color: mediumaquamarine;
         }
 
-        #header h1,
-        #header h2 {
-            color: red;
+        #header h1, #header h2 {
+            color: sandybrown;
         }
 
-        /*
+        
+/*
         form input {
 
-            width: 100%;
+            width: %;
         }
+        
 */
 
 
@@ -92,7 +94,7 @@
             color: red;
         }
 
-        /*        동위 선택자: 같은 레벨의(형제) 태그들을 기준으로 선택
+        /*동위 선택자: 같은 레벨의(형제) 태그들을 기준으로 선택
         + : 바로뒤의 요소 선택
         ~ : 같은 레벨의 형제 태그들 중 선택 */
 
@@ -123,16 +125,20 @@
             font-style: italic;
         }
 
-        h3:active {
+        h3:active { /*태그를 마우스로 선택시 */
             color: aqua;
         }
 
+        
+        
+        /*상태 선택자*/
+        
         #myform input {
-            background-color: white;
+            background-color: black;
         }
 
         #myform input:disabled {
-            background-color: darkkhaki;
+            background-color: cornflowerblue;
         }
 
         #myform input:enabled {
@@ -140,10 +146,9 @@
         }
 
 
-
         #myform input[type=checkbox] {
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
         }
 
 
@@ -152,6 +157,7 @@
             height: 30px;
         }
 
+        
         #viewmenu+div {
             display: none;
         }
@@ -159,8 +165,6 @@
         #viewmenu:checked+div {
             display: block;
         }
-
-
 
 
         #nav {
@@ -182,24 +186,27 @@
 */
 
         #nav>li:nth-child(2n+1) {
-            background: aqua;
+            background-color: skyblue;
         }
 
         #nav>li:nth-child(2n) {
-            background-color: aquamarine;
+            background-color: gainsboro;
         }
 
-        #nav>li:first-child {
-            /*            border: 1px solid gray;*/
-            border-radius: 10px 0px 0px 10px;
+        #nav>li:first-child { /*형제 관계 첫번째 */
+            /*border: 1px solid gray;*/
+            border-radius: 10px 0px 0px 10px; /*위치 : 시계방향*/
         }
 
-        #nav>li:last-child {
+        #nav>li:last-child { /*형제 관계 마지막 */
             /*            border: 1px solid gray;*/
             border-radius: 0px 10px 10px 0px;
         }
-
-        p::first-letter {
+        
+        
+        
+        /*문자 선택자*/
+        p::first-letter { /*p태그의 글자 맨 첫번째 글자를 의미*/
             font-size: 3em;
         }
 
@@ -208,22 +215,30 @@
             font-weight: bold;
         }
 
-        p::selection {
+        p::selection { /*사용자가 드래그한 글자를 의미*/
             background-color: greenyellow;
             color: darkgreen;
         }
 
+        
+        /*링크 선택자*/
+        
         a:link {
-            color: blue;    
-/*            text-decoration: none;*/
+            color:black;    
+/*          text-decoration: inherit; : 링크 디자인*/
             font-weight: bold;
         }
+        
         a:hover{
-            text-decoration: underline;
+            /*text-decoration: line-through;*/
         }
         
         a:active{
             color: antiquewhite;
+        }
+        
+        a:visited{
+            color: darkblue;
         }
                 
     </style>
@@ -258,7 +273,6 @@
             <h2>h2 tag</h2>
         </div>
 
-
         <div id="section">
             <h1 class="title">Title</h1>
             <p>안녕하세요</p>
@@ -279,9 +293,10 @@
     </table>
 
     <h3>header-3</h3>
+    <h4 class="aa">header-4</h4>
+    <h4 class="aa">header-4</h4>
     <h5>header-5</h5>
-    <h4 class="aa">header-4</h4>
-    <h4 class="aa">header-4</h4>
+    
 
 
     <form id="myform">
@@ -328,6 +343,8 @@
         </div>
 
     </form>
+    
+    
 
     <ul id="nav">
         <li><a href="#">home</a></li>
