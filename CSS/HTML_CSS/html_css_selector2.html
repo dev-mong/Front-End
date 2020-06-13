@@ -27,11 +27,15 @@
             padding: 0;
         }
 
+        /* 아이디 선택자
+            #아이디{}
+        */
+        
         #header {
             width: 300px;
             color: aliceblue;
             background-color: dodgerblue;
-            margin: 0 auto;
+            margin: 0 auto; /*중앙 배치*/
         }
 
         #aside {
@@ -65,8 +69,11 @@
         .font_bold{
             font-weight: 200;    
         }
-        .font_size{
-            font-size: 30px;
+        li.font_size{ /*li 태그 중에서 font_size 클래스 속성*/
+            font-size: 240%;
+        }
+        div.font_size{
+            font-size: 110%;
         }
         
     </style>
@@ -85,7 +92,7 @@
         네이버파이낸셜(대표 최인혁)이 8일 포인트 적립과 예치금 수익을 제공하는 ‘네이버통장’을 8일 선보였다. 이 상품은 네이버파이낸셜이 미래에셋대우와 함께 출시하는 수시입출금 CMA 통장으로, 네이버앱에서 신분증만으로 가입이 가능하다. 예치금 보관에 따른 3% 수익 뿐 아니라 통장과 연결된 네이버페이로 충전∙결제 시 3%의 포인트 적립 혜택도 함께 제공하는 것이 특징이다.
     </p>
 
-    <div id="header">HeaderHeaderHeaderHeaderHeader
+    <div id="header" class="font_size">HeaderHeaderHeaderHeaderHeader
         HeaderHeaderHeaderHeaderHeader
         HeaderHeaderHeaderHeaderHeader</div>
     <div id="aside">aside</div>
