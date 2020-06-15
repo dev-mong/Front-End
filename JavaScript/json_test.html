@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON 객체</title>
+    
+
+    <script src="json_test.js"></script>
+    <script>
+    //javaScript Object
+        // var book={
+        //     name:'java',
+        //     price:10000,
+        //     publisher:'Orange Media'
+        // }
+
+        //JavaScript Object -> Json(String)
+        var jsondata=JSON.stringify(obj);
+        
+        console.log(obj);
+
+        //javaScript object 확인
+        console.log('JsonData Type: '+typeof(jsondata));
+
+        window.onload=function(){
+            document.getElementById('json').innerHTML=jsondata;
+           
+            var newData='{"memberid":"cool","membername":"COOL","age":27,"porgram":["java","python","javascript"]}';
+            console.log('newData: '+typeof(newData));
+            
+            //JSON(String) -> JavaScript Object
+            var newObj = JSON.parse(newData);
+
+            console.log('newObj type: '+typeof(newObj));
+            console.log(newObj);
+
+            alert(newObj.memberid);
+        };
+
+      
+    </script>
+
+
+</head>
+<body>
+    <h1 id="json">안녕하세요</h1>
+</body>
+</html>
