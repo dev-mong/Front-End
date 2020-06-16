@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 문자 기반 데이터 저장
+        //cookie: 저장 장소 -> 브라우저
+        //key-value 형식으로 저장
+        //cookie : 4mb, javascript/server side 생성
+        //         서버로 요청을 보낼 떄 모든 cookie 정보를 함께 전송
+        //         유지되는 시간을 설정 할 수 있음 ex) 오늘하루 보이지 않기  
+        //localStorage : 25 ~ 40mb 생명주기가 없다
+        
+        //localStorage -> 데이터를 유지하고 싶을 떄 사용
+        //sesstionStorage -> 웹 브라우저가 종료되면 삭제됨 
+
+        //저장
+        localStorage.setItem('name','손흥민');
+        
+
+        //탐색
+        var saveData=localStorage.getItem('name');
+        console.log('저장 데이터 : '+saveData);
+
+
+        //수정
+        // localStorage.setItem('name','박지성');
+
+
+        //삭제
+        // localStorage.removeItem('name');
+        var saveData=localStorage.getItem('name');
+        console.log('저장 데이터:'+saveData);
+
+
+        //전체 삭제 : clear
+        // localStorage.clear();
+
+        
+        //sesstionStorage
+        // sessionStorage.setItem('sname','hong');
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
