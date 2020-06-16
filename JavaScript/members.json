@@ -3,5 +3,6 @@
     "memberid":"cool",
     "membername": "COOL",
     "age": 27,
-    "porgram":["java","python","javascript"]
+    "porgram":["java","python","javascript"],
+    "dept":["develope"]
 }
