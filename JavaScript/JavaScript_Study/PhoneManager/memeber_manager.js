@@ -1,55 +1,37 @@
 
 
-
+    var datas =[];
 window.onload = function () {
-
+    // var datas =[];
 
     var submit = document.getElementById('sub_btn');
-    var datas =[];
+
+    storage();
 
     submit.onclick = function () { //버튼 클릭 시 
-
         var uInput = document.getElementsByName('input');
-        // console.log(uInput[0].value);
-        // console.log(uInput[1].value);
-        // console.log(uInput[2].value);
 
-
-
-        // var data = '{"id":"' +  + '",';
         var inputData = '{"id":"' + uInput[0].value + '",';
         inputData += '"pw":"' + uInput[1].value + '",';
         inputData += '"name":"' + uInput[2].value + '"}';
 
+
         //Json 
-        var jsondata = JSON.parse(inputData);
+        jsondata = JSON.parse(inputData);
 
-        console.log('newData: ' + typeof (jsondata));
-        console.log('id: ' + jsondata.id);
-        console.log('pw: ' + jsondata.pw);
-        console.log('name: ' + jsondata.name);
-
-        // 배열에 저장
+        // 배열에 객체 저장
         datas.push(jsondata);
-        console.log(datas);
 
-        //데이터 저장
-        // localStorage.setItem('data', JSON.stringify(datas));
-        // // localStorage.setItem('pw', jsondata.pw);
-        // // localStorage.setItem('name', jsondata.name);
-
-        // console.log("data:"+localStorage.getItem('data'));
-        // console.log("data:"+localStorage.getItem('data'));
-        
+        localStorage.setItem('data', JSON.stringify(datas));
 
     }
-
     
-    // console.log("아이디 : " + localStorage.getItem('id'));
-    // console.log("비밀번호 : " + localStorage.getItem('pw'));
-    // console.log("이름 : " + localStorage.getItem('name'));
-  
-   
+    
+    // var get=localStorage.getItem('data');
+        
+    // var memeber=JSON.parse(get);
+    // console.log(memeber[0].id);
+
 
     //수정 클릭 시
     var btn_upate=document.getElementById('update');
@@ -76,5 +58,17 @@ window.onload = function () {
     btn_del.onclick=function(){
         
     }
+
 };
+
+    function storage(){ //동기화
+        console.log(1);
+        var storageData=localStorage.getItem('data');
+
+        if(storageData==null){
+            localStorage.getItem('data',JSON.stringify(datas));
+        }else{
+            datas=JSON.parse(storageData);
+        }
+    };
 
