@@ -80,33 +80,33 @@
             //XML 구조
             var sites = '';
             sites += '<sites>';
-            sites += '    <sites>';
+            sites += '    <site>';
             sites += '      <name>Naver</name>';
             sites += '      <url>http://wwww.naver.com</url>';
-            sites += '    </sites>';
-            sites += '    <sites>';
+            sites += '    </site>';
+            sites += '    <site>';
             sites += '      <name>Daum</name>';
             sites += '      <url>http://wwww.daum.net</url>';
-            sites += '    </sites>';
-            sites += '    <sites>';
+            sites += '    </site>';
+            sites += '    <site>';
             sites += '      <name>Kakao</name>';
             sites += '      <url>http://wwww.kakao.com</url>';
-            sites += '    </sites>';
+            sites += '    </site>';
             sites += '</sites>';
 
             var xmlDoc=$.parseXML(sites);
             var siteHtml='';
 
-            $(xmlDoc).find(sites).each(function(index){
+            $(xmlDoc).find('site').each(function(index){
                 var name=$(this).find('name').text(); //xml set
                 var url=$(this).find('url').text();
 
                 siteHtml +='<div class="site">';
-                siteHtml +='    <h3>'+name+'<h3>';
-                siteHtml +='    <p>'+url+'<p>';
+                siteHtml +='    <h3>'+name+'</h3>';
+                siteHtml +='    <p>'+url+'</p>';
                 siteHtml +='</div>';
 
-            }); //sites 태그 찾기
+            }); //site 태그 찾기
 
             $('#sites').html(siteHtml);
 
