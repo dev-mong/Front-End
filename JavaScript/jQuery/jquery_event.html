@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Evenet</title>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <style>
+        h1{
+            border: 3px solid black;
+            cursor: pointer;
+        }   
+        .over{
+            background-color: blue;
+            color:burlywood;
+            padding: 10px;
+        }
+        .big{
+            font-size: 2em;
+            font-weight:bold;
+            font-style: italic;
+            border: 3px solid green;
+        }
+        .alert{
+            color:red;
+        }
+        div.card{
+            width: 200px;
+            height: 100px;
+            border-radius: 10px;
+            border: 1px solid #DDD;
+            margin: 10px;
+            float: left;
+        }
+        #form{
+            clear:both;
+        }
+        h2{
+            border: 2px solid springgreen;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+
+            //h1 영역에 click 이벤트 적용
+            $('h1').on('click',function(){
+                // alert('click!!');
+                $(this).html(function(index, html){
+                    return html+'!';
+                    console.log(html);
+                });
+            });
+
+
+            //<<<<<<다시보기>>>>>>>
+            // setInterval(function(){ //사용자 입력없이 처리 
+            //     $('h1').first().trigger('click');
+            // },1000);
+
+
+            // $('h1').on({
+            //     mouseenter:function(){
+            //         $(this).addClass('over'); 
+            //     },
+            //     mouseleave:function(){ //영역 내에 마우스를 감지 
+            //         $(this).removeClass('over'); 
+            //     }
+            // });
+            $('h1').hover(function(){
+                $(this).addClass('over'); 
+            },function(){
+                $(this).removeClass('over'); 
+            });
+
+            // $('h1').blur();
+            // $('h1').focus();
+            // $('h1').load();
+            // $('h1').resize();
+            // $('h1').scroll();
+            // $('h1').mousedown();
+            // $('h1').mousemove();
+            // $('h1').keydown();
+            // $('h1').keypress();
+            // $('h1').keyup();
+            
+
+            var fIn=function(){
+                $(this).parent().addClass('big');
+                $('div.alert').remove(); //선택자 제거 
+            };
+            
+             $('input:text').focusin(fIn);
+
+            // $('input:text').focusin(function () { //입력창 선택
+            //     $(this).parent().addClass('big');
+            //     $('div.alert').remove(); //선택자 제거 
+            // });
+
+            $('input:text').focusout(function () { //입력창 아웃
+                $(this).parent().removeClass('big');
+
+                var uid=$('#uid').val();
+                if(uid.length<1){
+                    $(this).after('<div class="alert">아이디는 필수항목 입니다.</div>');
+                }
+            });
+
+            //이벤트 삭제 : off()
+            // $('h1').off();
+            $('h1').off('click'); //모든 h1 click 이벤트 삭제
+            $('input:text').off('focusin',fIn);// 여러개 text주에서 focusin의 fIn 메소드 제거
+
+            $('div.card').click(function(){
+                var name=$('h1',this).html();
+                var url=$('p',this).html();
+
+                alert('name: '+name + ' url: '+url);
+            });
+
+            $('a').click(function(e){ //이벤트 제거하고 이벤트 전달을 막음
+            
+                // e.preventDefault();
+                return false;
+            });
+
+            // $('h2').click(function(){
+            //     var length=$('h2').length;
+            //     var htmlVal=$(this).html(); //현재 이벤트 발생 객체 : this
+            //     $('#wrap').append('<h2>'+length+'-'+htmlVal+'</h2>');
+            // });
+
+            $('#wrap').on('click','h2',function(){ //동적으로 추가됨 
+                var length=$('h2').length;
+                var htmlVal=$(this).html(); 
+                $('#wrap').append('<h2>'+length+'-'+htmlVal+'</h2>');
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+    <h1>click~</h1>
+
+    <div>
+        <input type="text" id="uid"></div>
+
+    <div class="card"> 
+        <h1>네이버</h1>
+        <p>www.naver.com</p>
+    </div>
+    <div class="card"> 
+        <h1>다음</h1>
+        <p>www.daun.net</p>
+    </div>
+    <div class="card"> 
+        <h1>카카오</h1>
+        <p>www.kakao.com</p>
+    </div>
+
+    <div id="form">
+        <input type="text" id="uid"></div>
+
+    <a href="http://www.naver.com">NAVER</a>
+
+    <div id="wrap">
+      <h2>header</h2>
+
+    </div>
+
+</body>
+</html>
