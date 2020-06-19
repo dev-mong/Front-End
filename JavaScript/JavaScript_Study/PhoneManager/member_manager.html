@@ -1,76 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phone Manager</title>
 
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
 
-        #label{
+        #label {
             margin: 0;
-            padding:  0;
+            padding: 0;
         }
-        #lableli>li{
+
+        #lableli>li {
             list-style: none;
-            float:left;
+            float: left;
             padding: 10px;
-            width: 16%;   
+            width: 16%;
         }
-        #inputli>li{
+
+        #inputli>li {
             list-style: none;
-            float:left;
-            width: 17%;   
+            float: left;
+            width: 17%;
             margin: 7px;
         }
 
 
-        div,hr{
-            clear:left;
+        div,
+        hr {
+            clear: left;
         }
 
-        input{
+        input {
             width: 75%;
             height: 20px;
         }
-        
-       
-        #sub_btn{
+
+
+        #sub_btn {
             background-color: black;
-            color:cornsilk;
+            color: cornsilk;
             width: 15%;
             height: 30px;
-            
+
         }
 
-        table{
+        table {
             border: 1px solid;
             width: 100%;
             height: 100px;
         }
-        td{
+
+        td {
             border: 1px solid;
             margin: 5px;
             text-align: center;
         }
-
-       
+        #index{
+            display: none;
+        }
     </style>
 
     <script src="memeber_manager.js"></script>
 
 </head>
+
 <body>
     <h1>Member Manager</h1>
-    <hr>    
+    <hr>
     <h3>회원등록</h3>
     <br>
 
- 
+
     <ul calss="label" id="lableli">
         <li><label>아이디(이메일)</label></li>
         <li><label>비밀번호</label></li>
@@ -79,39 +86,43 @@
     <br>
 
     <div>
-    <ul calss="label" id="inputli">
-    <li><input type="text" id="id" class="text" name="input"></li>
-    <li><input type="password" id="pw" class="text" name="input"></li>
-    <li><input type="text" id="name" class="text" name="input"></li>
-    </ul>
+        <ul calss="label" id="inputli">
+            <li><input type="text" id="index"></li>
+            <li><input type="text" id="id" class="text" name="input"></li>
+            <li><input type="password" id="pw" class="text" name="input"></li>
+            <li><input type="text" id="name" class="text" name="input"></li>
+        </ul>
     </div>
 
     <input id="sub_btn" type="submit" value="등록">
 
+    <h2>데이터수정</h2>
+    <input type="button" value="수정" id="update" onclick="update()">
 
-    <hr>
-    <h3>회원 리스트</h3>
-    <table>
-        
-        <tr class="tr">
-            <td>index</td>
-            <td>아이디(이메일)</td>
-            <td>비밀번호</td>
-            <td>이름</td>
-            <td>관리</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><input type="button" value="수정" id="update">
-            <input type="button" value="삭제" id="delete">
-            </td>
-        </tr>
-    </table>
+
+            <hr>
+            <h3>회원 리스트</h3>
+            <table>
+                <tr class="tr">
+                    <td>index</td>
+                    <td>아이디(이메일)</td>
+                    <td>비밀번호</td>
+                    <td>이름</td>
+                    <td>관리</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input type="button" value="수정" id="update">
+                        <input type="button" value="삭제" id="delete">
+                    </td>
+                </tr>
+            </table>
 
 
 
 </body>
+
 </html>
