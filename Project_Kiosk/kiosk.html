@@ -8,140 +8,186 @@
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <style>
-        img{
-            height: auto;
-            width: auto;
-        }
-        .container{
-            margin: 0;
-            padding: 0;
-        }
+        
         ul>li{
             float: left;
             position: static;
             list-style: none;
-            padding: 10px;
+            padding: 20px;
         }
         .nav-tabs{
-            font-size: 30px;
+          font-size: 50px;
         }
        
-        
+
+        #header{
+          margin: 50px;
+          height: 150px;
+          text-align: center;
+        }
+        #header>h1{
+          font-size: 100px;
+        }
+        #box{
+          background-color: cornsilk;
+          /* width: 100%;
+          height: 70%;
+          margin: 15px; */
+          margin: 15px;
+          height: 90%;
+        }
+       
     </style>
 </head>
 <body>
 
-    <div class="content">
-      <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" data-toggle="tab" href="#coffee">Coffee</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#beverage">Beverage</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#desert">Desert</a>
-        </li>
-      </ul>
-    </div>
-    
+  <!-- <div id="header">
+    <h1>Bit Cafe</h1>
+  </div> -->
 
 
+  
+<!-- <div class="container"> -->
+  <div id="header">
+    <h1>Bit Cafe</h1>
+  </div>
+
+  <div class="content">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#coffee">Coffee</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#beverage">Beverage</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#desert">Desert</a>
+      </li>
+    </ul>
+  </div>
+<!-- </div> -->
+
+
+<!-- <div class="container"> -->
+  <div class="row">
+    <div class="col-md-8">
     <div class="tab-content">
-        <div class="tab-pane fade show active" id="coffee">
-          <p> 커피 </p>
-         
-          <!-- <span class="border border-dark">이미지</span>
-          <span class="border border-white">이미지</span> -->
-            
-          <div class="container">
-            <ul>
+          <div class="tab-pane fade show active" id="coffee">
+              <ul>
+                  <li><img src="image.JPG" class="rounded"></li>
+                  <li><img src="image.JPG" class="rounded"></li>
+                  <li><img src="image.JPG" class="rounded"></li>
+              </ul>
+             
+              <ul>
                 <li><img src="image.JPG" class="rounded"></li>
                 <li><img src="image.JPG" class="rounded"></li>
                 <li><img src="image.JPG" class="rounded"></li>
             </ul>
+            <ul>
+              <li><img src="image.JPG" class="rounded"></li>
+              <li><img src="image.JPG" class="rounded"></li>
+              <li><img src="image.JPG" class="rounded"></li>
+          </ul>
            
           </div>
-          <div class="container">
-            <ul>
+  
+          <div class="tab-pane fade" id="beverage">
+                <ul>
+                    <li><img src="image.JPG" class="rounded"></li>
+                    <li><img src="image.JPG" class="rounded"></li>
+                    <li><img src="image.JPG" class="rounded"></li>
+                </ul>
+               
+                <ul>
+                  <li><img src="image.JPG" class="rounded"></li>
+                  <li><img src="image.JPG" class="rounded"></li>
+                  <li><img src="image.JPG" class="rounded"></li>
+              </ul>
+              <ul>
                 <li><img src="image.JPG" class="rounded"></li>
                 <li><img src="image.JPG" class="rounded"></li>
                 <li><img src="image.JPG" class="rounded"></li>
             </ul>
-          </div>
-          <div class="container">
-            <ul>
+          
+            </div>
+  
+          <div class="tab-pane fade" id="desert">
+              
+                <ul>
+                    <li><img src="image.JPG" class="rounded"></li>
+                    <li><img src="image.JPG" class="rounded"></li>
+                    <li><img src="image.JPG" class="rounded"></li>
+                </ul>
+               
+                <ul>
+                  <li><img src="image.JPG" class="rounded"></li>
+                  <li><img src="image.JPG" class="rounded"></li>
+                  <li><img src="image.JPG" class="rounded"></li>
+              </ul>
+              <ul>
                 <li><img src="image.JPG" class="rounded"></li>
                 <li><img src="image.JPG" class="rounded"></li>
                 <li><img src="image.JPG" class="rounded"></li>
             </ul>
-          </div>
-
-        </div>
-
-
-
-        <div class="tab-pane fade" id="beverage">
-            <p> 음료 </p>
-         
-            <!-- <span class="border border-dark">이미지</span>
-            <span class="border border-white">이미지</span> -->
               
-            <div class="container">
-              <ul>
-                  <li><img src="image.JPG" class="rounded"></li>
-                  <li><img src="image.JPG" class="rounded"></li>
-                  <li><img src="image.JPG" class="rounded"></li>
-              </ul>
-             
             </div>
-            <div class="container">
-              <ul>
-                  <li><img src="image.JPG" class="rounded"></li>
-                  <li><img src="image.JPG" class="rounded"></li>
-                  <li><img src="image.JPG" class="rounded"></li>
-              </ul>
-            </div>
-            <div class="container">
-              <ul>
-                  <li><img src="image.JPG" class="rounded"></li>
-                  <li><img src="image.JPG" class="rounded"></li>
-                  <li><img src="image.JPG" class="rounded"></li>
-              </ul>
-            </div> </div>
 
+      </div>
 
-        <div class="tab-pane fade" id="desert">
-            <p> 디저트 </p>
-         
-            <!-- <span class="border border-dark">이미지</span>
-            <span class="border border-white">이미지</span> -->
-              
-            <div class="container">
-              <ul>
-                  <li><img src="image.JPG" class="rounded"></li>
-                  <li><img src="image.JPG" class="rounded"></li>
-                  <li><img src="image.JPG" class="rounded"></li>
-              </ul>
-             
-            </div>
-            <div class="container">
-              <ul>
-                  <li><img src="image.JPG" class="rounded"></li>
-                  <li><img src="image.JPG" class="rounded"></li>
-                  <li><img src="image.JPG" class="rounded"></li>
-              </ul>
-            </div>
-            <div class="container">
-              <ul>
-                  <li><img src="image.JPG" class="rounded"></li>
-                  <li><img src="image.JPG" class="rounded"></li>
-                  <li><img src="image.JPG" class="rounded"></li>
-              </ul>
-            </div> </div>
     </div>
 
 
+  <!-- </div> -->
+
+
+    <div class="col-md-4">
+      <div id="box">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">메뉴이름</th>
+            <th scope="col">수량</th>
+            <th scope="col">가격</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+      <button id="btn" type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
+
+    </div>
+   
+
+
+    <!-- </div> -->
+
+
+
+
+
+ 
 
      
 
