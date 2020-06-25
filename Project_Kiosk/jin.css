@@ -1,0 +1,97 @@
+
+body{
+    background-color: whitesmoke;
+    /* background-image: url('../images/image.JPG'); */
+    /* background-repeat:no-repeat; */
+}
+
+
+
+.mainmenu{
+    margin: 5%;
+}
+
+/* main 이미지 */
+/* .mainimg{
+    width: 100%;
+  background-image: url('../images/image.JPG');
+   /* background-repeat:no-repeat; */
+/*  background-size: cover;
+   height: 220px;   
+} */
+
+
+/* menu */
+.navbar{
+    box-shadow: none;
+    padding: 0;
+    margin-top: 11%;
+    /* opacity: 1; */
+    /* background-image: url("../images/image.JPG"); */
+}
+
+
+.nav-pills .nav-item .nav-link{
+
+    font-size: 150%;
+    /* border: 3px solid gray; */
+    /* border-radius: 0px;  */
+}
+
+/* 메뉴 위치 */
+.nav-pills{
+    width: 65.9%;
+    padding: 0;
+    background-color: yellow;
+    
+    /* border-radius: 30px 30px 0px 0px; */
+}
+
+li.nav-item{
+    opacity: 1;
+}
+
+/* 메뉴 선택 */
+.selected{ 
+    background-color: white;
+    border-radius: 15px 15px 0px 0px;
+}
+
+/* content */
+.menu-grid{
+   /* border-radius: 0px 30px 30px 30px; */
+   width: 100%;
+   /* border: 3px solid gray; */
+   border: white;
+   /* background-color: yellow; */
+
+}
+.col-sm-8  {
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 수량 */
+.pay-grid{
+    border:1px solid white;
+}
