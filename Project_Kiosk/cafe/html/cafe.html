@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIT CAFE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link href="../css/cafe.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row mt-4">
+
+            <!-- 메뉴 영역 -->
+            <div class="col-md-8">
+
+                <div class="menu-grid">
+
+                    <div class="container ">
+
+                        <div class="container">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#coffee">Coffee</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#beverage">Beverage</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#desert">Desert</a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="coffee">
+
+                               <div>123</div>
+            
+                                        
+                            <div class="swiper-container center-block 2 swiper2">
+                                <div class="swiper-wrapper">
+                                    <!-- 야기에 추가 되는건디 ..ㄴ -->
+                                </div>
+                                <!-- Add Scroll Bar -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+
+                                <!-- <ul>
+                                    
+                                    <li><img src="images/image.JPG" class="rounded"></li>
+                                    <li><img src="images/image.JPG" class="rounded"></li>
+                                    
+                                </ul>
+                             -->
+                             
+                            </div>
+                    
+                            <div class="tab-pane fade" id="beverage">
+                                <ul>
+                                    <li><img src="images/image.JPG" class="rounded"></li>
+                                    <li><img src="images/image.JPG" class="rounded"></li>
+                                   
+                                </ul>
+                            
+                              </div>
+                    
+                            <div class="tab-pane fade" id="desert">
+                                
+                                <ul>
+                                    <li><img src="images/image.JPG" class="rounded"></li>
+                                    <li><img src="images/image.JPG" class="rounded"></li>
+                                   
+                                </ul>
+                                
+                              </div>
+
+                        
+                    </div>
+
+                    </div>
+
+
+                    <!-- menu -grid -->
+                </div>
+
+            </div>
+            <!-- col-md-8 -->
+
+
+
+            <!-- 결제 영역 -->
+            <div class="col-md-4">
+
+                <div class="col-sm-12 select-grid center">
+                    <div class="row product">
+                        <div class="col-sm-12 checkout ">
+                            <h3>Check out</h3>
+                        </div>
+                        <div class="col-sm-4 name-tag">
+                            <p>Name</p>
+                        </div>
+                        <div class="col-sm-4 qty-tag">
+                            <p>QTY</p>
+                        </div>
+                        <div class="col-sm-4 price-tag">
+                            <P>Price</P>
+                        </div>
+                    </div>
+                    <div class="swiper-container swiper1">
+                        <div class="swiper-wrapper orderswiper">
+                            <div class="swiper-slide orderslide">
+                                <div class="container">
+                                    <div class="row order-list">
+                                        <div class="col-sm-1 delorder z">❌</div>
+                                        <div class="col-sm-3 ordername z">아메리카노</div>
+                                        <div class="col-sm-1 plusorder z">➕</div>
+                                        <div class="col-sm-2 orderqty z">1</div>
+                                        <div class="col-sm-1 minusorder z">➖</div>
+                                        <div class="col-sm-3 orderprice z">5000</div>
+                                        <div class="col-sm-1 orderprice z">원</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-12 pay-grid mt-4">
+                    <div>
+                        <div class="container mt-3">
+
+                            <div class="row">
+                                <div class="col-sm-5 total">Total</div>
+                                <div class="col-sm-7 price">5000</div>
+                            </div>
+
+                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+                                <a class="btn btn-default" href="#layer2" id="5">결제</a>
+
+                                <div class="dim-layer">
+                                    <div class="dimBg"></div>
+                                    <div id="layer2" class="pop-layer">
+                                        <div class="pop-container">
+                                            <div class="pop-conts">
+                                                <!--content //-->
+                                                <p class="ctxt mb20">Thank you.<br>
+                                                    Your registration was submitted successfully.<br>
+                                                    Selected invitees will be notified by e-mail on JANUARY
+                                                    24th.<br><br>
+                                                    Hope to see you soon!
+                                                    <br><br>
+                                                <div class="payment">
+                                                    <img src="../images/manwon.jpg" id="draggable"
+                                                        class="ui-widget-content">
+
+                                                    <img src="../images/bowl.jpg" id="droppable" class="notcss">
+                                                </div>
+                                                </p>
+
+                                                <div class="btn-r">
+                                                    <a href="#" class="btn-layerClose">Close</a>
+                                                </div>
+                                                <!--// content-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a class="btn btn-default" href="javascript:;" id="6">초기화</a>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- col-md-4-->
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--   Core JS Files   -->
+    <script src="../assets/js/core/jquery.min.js" type="text/javascript"></script>
+    <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="../assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+    <script src="../assets/js/plugins/moment.min.js"></script>
+    <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+    <script src="../assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <script src="../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+    <script src="../assets/js/material-kit.js?v=2.0.7" type="text/javascript"></script>
+
+
+    <!--스위퍼 CDN 스크립트-->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+    <!-- 드래그 앤 드랍 -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper1', {
+            direction: 'vertical',
+            slidesPerView: 'auto',
+            freeMode: true,
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            mousewheel: true,
+
+        });
+    </script>
+
+    <script>
+        var swiper = new Swiper('.swiper2', {
+            observer: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+
+    <!--내가만든 스크립트-->
+    <script src="../js/kjj.js"></script>
+    <script src="js/seongmin.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/jungmin.js"></script>
+    <script src="js/euna.js"></script>
+    <script src="js/jin.js"></script>
+    <script src="js/myung.js"></script>
+
+
+    <!-- javascript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

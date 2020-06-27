@@ -1,0 +1,74 @@
+
+body{
+    background-color: aqua;
+}
+.menu-grid {
+    /* overflow: scroll; */
+    background-color: white;
+    border: 3px solid black;
+    /* left: 30px;
+    
+    width: 700px;
+    height: 800px; */
+    height: 800px;
+}
+.select-grid {
+    background-color: white;
+    border: 3px solid black;
+    /* right: 30px;
+
+    width : 500px;
+    height : 550px; */
+    height: 600px;
+}
+.pay-grid {
+    background-color: white;
+    border: 3px solid black;
+    /* margin-top: 50px;
+
+    right: 30px;
+    bottom: 5px;
+    
+    width: 500px;
+    height: 200px; */
+    height: 176px;
+}
+
+/* 메뉴 선택 */
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active { 
+     border-color: blue  blue white;
+}
+.nav-tabs{
+    /* border-bottom: blue; */
+    border-color: blue;
+    /* background-image: url("../images/image.JPG");
+    height: 200px; */
+}
+.swiper-button-next,
+.swiper-button-prev{
+  --swiper-navigation-color: gray;
+
+
+}
+
+
+.swiper-slide {
+  font-size: 18px;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    font-size: 18px;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 30px;
+}
