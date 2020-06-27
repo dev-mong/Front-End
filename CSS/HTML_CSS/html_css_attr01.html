@@ -61,6 +61,49 @@
             color: rgb(0, 255, 0);
         }
 
+         body {
+            background-image: url('../image1.jpg');
+            /*background-size: 50%;*/
+            /*background-size : 50% 300px;*/
+            background-size: 25%;
+            background-repeat: no-repeat;
+            
+/*            background-position: right bottom ;*/
+            
+             /*배경 이미지 고정 -> 스크롤을 내려도 같이 내려옴 */
+            background-attachment:fixed;
+            
+        }
+        
+       hr {
+            border: 0;
+            border-bottom: thin solid #AAAAAA;
+        }
+        
+       div.box {
+        width : 300px;
+        height : 300px;
+        border : 1px solid gray;
+        } 
+
+        #box1{
+            background-color: red; 
+            border-width: 10px;
+            border-style: double;
+            padding: 10px;
+            padding-top: 100px;
+            margin: 10px;
+            margin-top: 100px;
+
+        }
+        #box2{
+            background-color: blue;
+            border-radius: 50%;
+        }
+        img{
+            width: 200px;
+            border-radius: 50%;
+        }
         span{
             border: 1px solid red;
         }
@@ -70,9 +113,30 @@
         }
         
         #sp{
-            display: block;
+            /*자동으로 앞뒤 줄바뀜이 됨 -> width: 100%*/
+            display: block; 
+/*            display: inline-block; */
+        }
+        #bg{
+            height: 300px;
+            width: 100%;
+            background-image: url('../image1.jpg');
+/*            background-size: cover;*/
+            color: yellow;
+            font-size: 5em;
+            line-height: 300px;
+            text-align: center;
         }
         
+        .font_kor{
+            font-family: '궁서체', '돋음', '돋음체';
+        }
+        .font_web {
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+         .font_penscript {
+            font-family: 'Nanum Pen Script', cursive;
+        }
         
         
     </style>
@@ -103,15 +167,31 @@
             <td>HTML5 - 200%</td>
         </tr>
 
-
     </table>
 
+        
+    <hr>
+    
+    
+    <div class="box" id="box1">
+        TEXT
+    </div>
+    
+    <div class="box" id="box2">
+    
+    </div>
+    
+    <hr>
+    <img src="../image1.jpg">
+    
     <span id="sp">Dummy</span>
     <div id="box">
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
     </div> 
     <span>Dummy</span>
-
+    
+    <hr>
+    <div id="bg" class="font_penscript ">스타워즈</div>
 
 
 
