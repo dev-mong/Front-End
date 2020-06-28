@@ -66,20 +66,25 @@ console.log('Im Working');
 // // window.addEventListener("offline",handleOffline);
 // window.addEventListener("online",handleOnline);
 
-const title=document.getElementById('title');
-console.log(title);
-const CLICKED_CLASS="clicked";
-function handleClick(){
-    console.log(1);
-    const currentClass=title.className;
-    if(currentClass !== CLICKED_CLASS){
-        title.className = CLICKED_CLASS;
-    }else{
-        title.className="";
+const title = document.getElementById('title');
+const CLICKED_CLASS = "clicked";
+
+function handleClick() {
+
+    // contains -> class 태그 존재 여부 확인
+    const hasClass = title.classList.contains(CLICKED_CLASS);
+
+    if (hasClass) {
+        // title.className = CLICKED_CLASS;
+        title.classList.remove(CLICKED_CLASS);
+    } else {
+        // title.className="";
+        title.classList.add(CLICKED_CLASS);
     }
 }
 
-function init(){
-    title.addEventListener("click",handleClick);
+
+function init() {
+    title.addEventListener("click", handleClick);
 }
 init();

@@ -4,6 +4,9 @@
 h1{
     color: black;
 }
-.click{
+.clicked{
     color: #ff7979;
+}
+.btn{
+    cursor: pointer;
 }
